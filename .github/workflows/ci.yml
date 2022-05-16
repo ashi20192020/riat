@@ -27,7 +27,7 @@ jobs:
         rustup target add wasm32-unknown-unknown --toolchain nightly
           
     - name: Build
-      run: SKIP_WASM_BUILD= cargo check --all-targets --features runtime-benchmarks --features try-runtime
+      run: SKIP_WASM_BUILD= cargo check --all-targets --features runtime-benchmarks
       
     - name: Test
       run: SKIP_WASM_BUILD= cargo test --workspace --features runtime-benchmarks -- --nocapture
